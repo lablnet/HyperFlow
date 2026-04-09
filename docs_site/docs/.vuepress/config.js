@@ -38,6 +38,7 @@ export default defineUserConfig({
             '/guide/installation.md',
             '/guide/basic-concepts.md',
             '/guide/advanced-concepts.md',
+            '/guide/limitations.md',
             '/guide/examples.md',
             '/guide/contributing.md',
           ],

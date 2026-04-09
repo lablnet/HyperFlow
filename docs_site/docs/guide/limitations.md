@@ -1,0 +1,36 @@
+# Limitations
+
+While HyperFlow enables powerful self-improving agents, several technical and practical limitations exist in the current implementation.
+
+### Frozen Foundation Models
+The most significant limitation is that **the underlying Large Language Model (LLM) is frozen**. 
+- HyperFlow improves the **Agent Logic** (Python code, prompts, and tools), but it **cannot** update the weights or training of the model itself. 
+- All improvements are "external" to the model's core architecture.
+
+### Framework Immutability (Self-Update Paradox)
+**The Agent cannot evolve its own core classes!**
+Because HyperFlow is often installed as a library (via `pip`), the core code for `TaskAgent` and `MetaAgent` lives in the system's `site-packages`.
+- The MetaAgent **cannot** modify its own framework code or its class definitions.
+- Even in a local setup, the evolutionary loop targets a specific `repo_path`. If the agent's primary logic is outside that directory, it is **impossible** for the MetaAgent to reach out and update itself.
+- This is why the framework focuses on evolving **prompts in external files** and **local domain logic**—the core "Agent" infrastructure remains static and generic.
+
+### Fixed Task Distribution
+Currently, the system optimizes for a **fixed set of tasks** provided by the user. Truly unbounded open-endedness requires a system that can also generate its own tasks and curriculum (co-evolution), which is a future research direction.
+
+### Static Outer Loop
+While the agent can modify almost all of its own codebase (including its own MetaAgent logic), the **outer evolutionary process** is currently human-engineered:
+- **Parent Selection**: The logic for choosing which generations to branch from is fixed.
+- **Evaluation Protocols**: The way task scripts are run and scored is defined in the initial configuration.
+
+### Computational Cost
+Evolutionary computation is resource-intensive. 
+- **Generations**: Each experiment typically requires 50-200 iterations.
+- **Costs**: Depending on the Foundation Model (FM) used, a full run can be expensive in terms of API tokens.
+
+### Sandboxing & Security
+Self-modifying code must be executed in a **sandbox** (e.g., Docker). 
+- **Latency**: Running tasks in isolated environments adds overhead.
+- **Safety**: Ensuring the agent doesn't perform unintended side effects while editing its own code requires strict resource limits.
+
+### Overfitting
+Just like standard machine learning, the MetaAgent can "overfit" to the training tasks. If it finds a clever way to solve the training set that doesn't work on new problems, its performance on the **Test Set** will be poor.

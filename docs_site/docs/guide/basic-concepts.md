@@ -15,14 +15,20 @@ The TaskAgent serves as the problem solver for domain-specific tasks. It receive
 
 ### MetaAgent — The Improver
 
-The MetaAgent's job is to make the TaskAgent better. It acts as the "mutation operator". It reads past evaluation results, identifies failures, and refines the TaskAgent's **prompts, logic, and tools** to fix them.
+The MetaAgent's job is to make the system better. It acts as the "mutation operator". Because HyperFlow defines an agent as a **computable program**, the MetaAgent can refine the entire codebase—including its own **meta-logic, prompts, internal tools, and task-solving strategies**. This is known as **metacognitive self-modification**.
 - **Input**: Repo path + eval results path + parent score
 - **Output**: Modified source code on disk (patches/diffs)
 - **Tools**: `bash` (run shell commands) + `editor` (view/edit files) — built-in
 
 ## The Evolutionary Loop
 
-The evolutionary loop (`run_generate_loop`) is the heart of the system. It runs multiple generations, each improving on a previous one.
+This evolutionary loop ensures that even if the initial agent is weak, the system can eventually "discover" more robust task-solving machinery.
+
+---
+
+**Next Steps**:
+- [Advanced Concepts](./advanced-concepts.md)
+- [Limitations](./limitations.md)
 
 ```mermaid
 graph TD

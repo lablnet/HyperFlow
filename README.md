@@ -11,13 +11,15 @@ Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta
 
 ## What it does
 
-HyperFlow runs an evolutionary self-improvement loop where a **MetaAgent** rewrites a **TaskAgent's** prompts, logic, and tools to make it better at solving tasks. Each generation:
+HyperFlow runs an evolutionary self-improvement loop where a **MetaAgent** rewrites its own source code (including prompts, tools, and logic) to make it better at solving tasks. It is **self-referential**: the mechanism that improves the agent is itself part of the editable code. Each generation:
 
 1. Select a parent generation from the archive
 2. MetaAgent reads past evaluation scores and edits the source code
-3. The modified TaskAgent is evaluated on domain tasks
-4. Score + code diff are saved to the archive
-5. Repeat
+3. Evaluation scripts run in a sandbox to score the new agent
+4. Better agents are added back to the archive for future generations
+
+> [!IMPORTANT]
+> This framework is currently in an **Experimental** state. See [Limitations](docs/limitations.md) for more information.
 
 The TaskAgent gets better over generations without manual intervention.
 

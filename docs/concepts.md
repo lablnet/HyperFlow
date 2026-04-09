@@ -61,7 +61,7 @@ The TaskAgent is intentionally minimal. Its behavior is mostly driven by prompts
 
 ### MetaAgent — The Improver
 
-The MetaAgent's job is to make the TaskAgent better. It reads past evaluation results, identifies failures, and refines the TaskAgent's **prompts, logic, and tools** to fix them.
+The MetaAgent's job is to make the system better. Because HyperFlow defines an agent as a **computable program**, the MetaAgent can refine the entire codebase—including its own **meta-logic (how it improves), prompts, internal tools, and task-solving strategies**. This self-referential process is known as **Metacognitive Self-Modification**.
 
 - **Input**: Repo path + eval results path + parent score
 - **Output**: Modified source code on disk (patches/diffs)
@@ -586,3 +586,10 @@ cd examples/git_evolution && python run.py
 | **Local Maximum** | A solution that's better than its neighbors but not the best overall |
 | **Global Maximum** | The best possible solution across all approaches |
 | **Evolutionary Loop** | Optimization algorithms from evolutionary computation that inspired this architecture |
+
+---
+
+**Next Steps**:
+- [Installation](installation.md)
+- [Limitations](limitations.md)
+- [Examples](../examples/README.md)
