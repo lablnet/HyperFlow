@@ -1,0 +1,5 @@
+REPO_NAME = "hyperflow"
+DEFAULT_OUTPUT_DIR = "outputs"
+ARCHIVE_FILENAME = "archive.jsonl"
+PATCH_FILENAME = "model_patch.diff"
+METADATA_FILENAME = "metadata.json"

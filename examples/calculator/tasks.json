@@ -1,0 +1,52 @@
+[
+  {
+    "id": "calc_001",
+    "description": "What is 3 + 5?",
+    "expected": "8"
+  },
+  {
+    "id": "calc_002",
+    "description": "What is 12 * 15?",
+    "expected": "180"
+  },
+  {
+    "id": "calc_003",
+    "description": "What is 5 - 9?",
+    "expected": "-4"
+  },
+  {
+    "id": "calc_004",
+    "description": "What is 7 / 2?",
+    "expected": "3.5"
+  },
+  {
+    "id": "calc_005",
+    "description": "What is 20 * 30?",
+    "expected": "600"
+  },
+  {
+    "id": "calc_006",
+    "description": "What is 3 - 10?",
+    "expected": "-7"
+  },
+  {
+    "id": "calc_007",
+    "description": "What is 15 / 4?",
+    "expected": "3.75"
+  },
+  {
+    "id": "calc_008",
+    "description": "What is 4 * 6?",
+    "expected": "24"
+  },
+  {
+    "id": "calc_009",
+    "description": "What is 100 * 25?",
+    "expected": "2500"
+  },
+  {
+    "id": "calc_010",
+    "description": "What is 1 - 8?",
+    "expected": "-7"
+  }
+]

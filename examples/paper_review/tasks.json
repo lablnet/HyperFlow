@@ -1,0 +1,58 @@
+[
+  {
+    "id": "pr_001",
+    "title": "Attention Is All You Need",
+    "abstract": "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train.",
+    "venue": "NeurIPS",
+    "decision": "accept"
+  },
+  {
+    "id": "pr_002",
+    "title": "A Simple Linear Regression Approach to Image Classification",
+    "abstract": "We propose using ordinary least squares linear regression for image classification on CIFAR-10. We flatten each 32x32 image into a 3072-dimensional vector and fit a linear model. Our method achieves 35% accuracy, which we argue is a reasonable baseline. No neural networks are used.",
+    "venue": "NeurIPS",
+    "decision": "reject"
+  },
+  {
+    "id": "pr_003",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+    "abstract": "We introduce a new language representation model called BERT, which stands for Bidirectional Encoder Representations from Transformers. Unlike recent language representation models, BERT is designed to pre-train deep bidirectional representations from unlabeled text by jointly conditioning on both left and right context in all layers. As a result, the pre-trained BERT model can be fine-tuned with just one additional output layer to create state-of-the-art models for a wide range of tasks.",
+    "venue": "NAACL",
+    "decision": "accept"
+  },
+  {
+    "id": "pr_004",
+    "title": "Incrementing a Counter: A Novel Approach",
+    "abstract": "We present a method for incrementing an integer counter by one. Our approach uses the addition operator to add 1 to the current value. We evaluate on counters ranging from 0 to 100 and achieve 100% accuracy. We believe this is a significant contribution to the field of computer science.",
+    "venue": "ICML",
+    "decision": "reject"
+  },
+  {
+    "id": "pr_005",
+    "title": "GPT-4 Technical Report",
+    "abstract": "We report the development of GPT-4, a large-scale, multimodal model which can accept image and text inputs and produce text outputs. While less capable than humans in many real-world scenarios, GPT-4 exhibits human-level performance on various professional and academic benchmarks, including passing a simulated bar exam with a score around the top 10% of test takers.",
+    "venue": "arXiv",
+    "decision": "accept"
+  },
+  {
+    "id": "pr_006",
+    "title": "Random Guessing Outperforms Deep Learning on Synthetic Noise",
+    "abstract": "We generate a dataset of pure random noise and train a deep neural network to classify it. We find that the network overfits to the noise and achieves near-perfect training accuracy but random test accuracy. We compare against a random baseline and find no significant difference. We conclude that deep learning has fundamental limitations.",
+    "venue": "ICLR",
+    "decision": "reject"
+  },
+  {
+    "id": "pr_007",
+    "title": "Scaling Laws for Neural Language Models",
+    "abstract": "We study empirical scaling laws for language model performance on the cross-entropy loss. The loss scales as a power-law with model size, dataset size, and the amount of compute used for training, with some trends spanning more than seven orders of magnitude. Larger models are significantly more sample-efficient. These results show that language model performance improves predictably as we scale up.",
+    "venue": "arXiv",
+    "decision": "accept"
+  },
+  {
+    "id": "pr_008",
+    "title": "String Concatenation in Python: A Benchmark Study",
+    "abstract": "We benchmark string concatenation in Python using the + operator versus join(). We test on strings of length 10 to 10000 and measure wall clock time. We find that join() is faster for large strings. Our contribution is a comprehensive benchmark suite for this fundamental operation.",
+    "venue": "NeurIPS",
+    "decision": "reject"
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "id": "bash_001",
+    "description": "Print the string 'hello world' to stdout.",
+    "expected_output": "hello world"
+  },
+  {
+    "id": "bash_002",
+    "description": "Print the numbers 1 through 5, each on a separate line.",
+    "expected_output": "1\n2\n3\n4\n5"
+  },
+  {
+    "id": "bash_003",
+    "description": "Print the length of the string 'hello world' (number of characters including the space).",
+    "expected_output": "11"
+  },
+  {
+    "id": "bash_004",
+    "description": "Print the numbers 10, 20, 30 separated by commas (no spaces).",
+    "expected_output": "10,20,30"
+  },
+  {
+    "id": "bash_005",
+    "description": "Print 'even' if 42 is even, or 'odd' if 42 is odd.",
+    "expected_output": "even"
+  },
+  {
+    "id": "bash_006",
+    "description": "Print the reverse of the string 'abcdef'.",
+    "expected_output": "fedcba"
+  },
+  {
+    "id": "bash_007",
+    "description": "Print the sum of 17 and 25.",
+    "expected_output": "42"
+  },
+  {
+    "id": "bash_008",
+    "description": "Print 'yes' if the file /etc/hosts exists, 'no' otherwise.",
+    "expected_output": "yes"
+  },
+  {
+    "id": "bash_009",
+    "description": "Print the word 'banana' repeated 3 times separated by spaces.",
+    "expected_output": "banana banana banana"
+  },
+  {
+    "id": "bash_010",
+    "description": "Print the factorial of 5 (i.e., 120).",
+    "expected_output": "120"
+  },
+  {
+    "id": "bash_011",
+    "description": "Print only the third line of the following text: 'alpha\\nbeta\\ngamma\\ndelta'. Use echo -e to interpret the escape sequences.",
+    "expected_output": "gamma"
+  },
+  {
+    "id": "bash_012",
+    "description": "Count how many vowels (a, e, i, o, u, case-insensitive) are in the string 'Encyclopedia' and print only the number.",
+    "expected_output": "6"
+  },
+  {
+    "id": "bash_013",
+    "description": "Print the string 'hello' with each character on a separate line.",
+    "expected_output": "h\ne\nl\nl\no"
+  },
+  {
+    "id": "bash_014",
+    "description": "Print the ASCII value (decimal) of the character 'A'.",
+    "expected_output": "65"
+  },
+  {
+    "id": "bash_015",
+    "description": "Given the string 'foo:bar:baz', replace all colons with newlines and print the result.",
+    "expected_output": "foo\nbar\nbaz"
+  }
+]

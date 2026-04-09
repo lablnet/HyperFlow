@@ -1,0 +1,107 @@
+[
+  {
+    "id": "fact_001",
+    "statement": "The Great Wall of China is visible from space with the naked eye.",
+    "category": "geography",
+    "answer": "false",
+    "explanation": "This is a common myth. The Great Wall is not visible from low Earth orbit without aid."
+  },
+  {
+    "id": "fact_002",
+    "statement": "Water boils at 100 degrees Celsius at standard atmospheric pressure.",
+    "category": "science",
+    "answer": "true",
+    "explanation": "At 1 atm (101.325 kPa), water boils at exactly 100°C."
+  },
+  {
+    "id": "fact_003",
+    "statement": "Humans use only 10% of their brain.",
+    "category": "biology",
+    "answer": "false",
+    "explanation": "Brain imaging shows that all areas of the brain have function; we use virtually all of it."
+  },
+  {
+    "id": "fact_004",
+    "statement": "Lightning never strikes the same place twice.",
+    "category": "science",
+    "answer": "false",
+    "explanation": "Tall structures like the Empire State Building are struck many times per year."
+  },
+  {
+    "id": "fact_005",
+    "statement": "The speed of light in a vacuum is approximately 3 × 10^8 meters per second.",
+    "category": "physics",
+    "answer": "true",
+    "explanation": "The speed of light is 299,792,458 m/s, approximately 3 × 10^8 m/s."
+  },
+  {
+    "id": "fact_006",
+    "statement": "Goldfish have a memory span of only 3 seconds.",
+    "category": "biology",
+    "answer": "false",
+    "explanation": "Goldfish can remember things for months. The 3-second myth is false."
+  },
+  {
+    "id": "fact_007",
+    "statement": "The Earth revolves around the Sun once every 365.25 days approximately.",
+    "category": "astronomy",
+    "answer": "true",
+    "explanation": "One orbit takes about 365.25 days, which is why we have leap years."
+  },
+  {
+    "id": "fact_008",
+    "statement": "Bananas are berries, but strawberries are not.",
+    "category": "biology",
+    "answer": "true",
+    "explanation": "Botanically, bananas qualify as berries while strawberries are aggregate accessory fruits."
+  },
+  {
+    "id": "fact_009",
+    "statement": "Glass is a liquid that flows very slowly over time.",
+    "category": "science",
+    "answer": "false",
+    "explanation": "Glass is an amorphous solid. The thick-bottomed old windows myth is due to manufacturing, not flow."
+  },
+  {
+    "id": "fact_010",
+    "statement": "Napoleon Bonaparte was unusually short for his time.",
+    "category": "history",
+    "answer": "false",
+    "explanation": "Napoleon was about 5'7\" (170 cm), average or slightly above average for his era."
+  },
+  {
+    "id": "fact_011",
+    "statement": "Octopuses have three hearts.",
+    "category": "biology",
+    "answer": "true",
+    "explanation": "Two branchial hearts pump blood to the gills; one systemic heart pumps it to the body."
+  },
+  {
+    "id": "fact_012",
+    "statement": "Mount Everest is the tallest mountain measured from base to peak.",
+    "category": "geography",
+    "answer": "false",
+    "explanation": "Mauna Kea in Hawaii is taller from base to peak (~10,211m) but most is underwater. Everest is highest above sea level."
+  },
+  {
+    "id": "fact_013",
+    "statement": "Vitamin C cures the common cold.",
+    "category": "health",
+    "answer": "false",
+    "explanation": "Vitamin C may slightly reduce cold duration but does not cure or prevent colds."
+  },
+  {
+    "id": "fact_014",
+    "statement": "Sound travels faster in water than in air.",
+    "category": "physics",
+    "answer": "true",
+    "explanation": "Sound travels at ~1,480 m/s in water vs ~343 m/s in air."
+  },
+  {
+    "id": "fact_015",
+    "statement": "The Amazon rainforest produces 20% of the world's oxygen.",
+    "category": "science",
+    "answer": "false",
+    "explanation": "The Amazon consumes roughly as much oxygen as it produces. Most O2 comes from ocean phytoplankton."
+  }
+]

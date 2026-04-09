@@ -1,0 +1,4 @@
+Compare the student's answer to the expected answer.
+If the two strings are EXACTLY identical character-by-character, or if they are numerically equivalent (e.g., 5.0 vs 5, 1/2 vs 0.5), respond "accept".
+If they differ in any other way, respond "reject".
+Consider mathematical equivalence for numbers, but do not interpret other types of equivalence.

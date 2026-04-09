@@ -1,0 +1,86 @@
+[
+  {
+    "id": "grade_001",
+    "question": "What is 2 + 2?",
+    "student_answer": "4",
+    "expected_answer": "4",
+    "correct": true
+  },
+  {
+    "id": "grade_002",
+    "question": "What is 10 / 2?",
+    "student_answer": "5.0",
+    "expected_answer": "5",
+    "correct": true
+  },
+  {
+    "id": "grade_003",
+    "question": "What is 1 divided by 2?",
+    "student_answer": "1/2",
+    "expected_answer": "0.5",
+    "correct": true
+  },
+  {
+    "id": "grade_004",
+    "question": "What is 6 * 7?",
+    "student_answer": "  42  ",
+    "expected_answer": "42",
+    "correct": true
+  },
+  {
+    "id": "grade_005",
+    "question": "What is 100 - 1?",
+    "student_answer": "99.00",
+    "expected_answer": "99",
+    "correct": true
+  },
+  {
+    "id": "grade_006",
+    "question": "What is 3 + 5?",
+    "student_answer": "7",
+    "expected_answer": "8",
+    "correct": false
+  },
+  {
+    "id": "grade_007",
+    "question": "What is the square root of 9?",
+    "student_answer": "3.0",
+    "expected_answer": "3",
+    "correct": true
+  },
+  {
+    "id": "grade_008",
+    "question": "What is 0.1 + 0.2?",
+    "student_answer": "0.3",
+    "expected_answer": "0.30",
+    "correct": true
+  },
+  {
+    "id": "grade_009",
+    "question": "What is 15 / 4?",
+    "student_answer": "3.75",
+    "expected_answer": "3.75",
+    "correct": true
+  },
+  {
+    "id": "grade_010",
+    "question": "What is 2^3?",
+    "student_answer": "9",
+    "expected_answer": "8",
+    "correct": false
+  },
+  {
+    "id": "grade_011",
+    "question": "What is 1/3 as a decimal?",
+    "student_answer": "0.333",
+    "expected_answer": "0.333",
+    "correct": true
+  },
+  {
+    "id": "grade_012",
+    "question": "What is 50% of 200?",
+    "student_answer": "100.0",
+    "expected_answer": "100",
+    "correct": true
+  }
+]
