@@ -3,7 +3,7 @@ requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hyperflow"
+name = "hyperflow-ai"
 version = "1.0.0"
 description = "A self-improving agent framework built on LangChain and LangGraph"
 readme = "README.md"
@@ -12,6 +12,7 @@ requires-python = ">=3.11"
 authors = [
     {name = "Muhammad Umer Farooq", email = "umer@lablnet.com"},
 ]
+keywords = ["agent", "self-improving", "meta-learning", "langchain", "langgraph", "evolutionary"]
 
 dependencies = [
     "langchain>=0.3",
@@ -27,6 +28,12 @@ dependencies = [
     "pydantic>=2.0",
     "click>=8.1",
 ]
+
+[project.urls]
+"Homepage" = "https://github.com/lablnet/HyperFlow"
+"Bug Reports" = "https://github.com/lablnet/HyperFlow/issues"
+"Source" = "https://github.com/lablnet/HyperFlow"
+"Changelog" = "https://github.com/lablnet/HyperFlow/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [

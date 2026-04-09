@@ -2,7 +2,7 @@
 
 Self-improving agent framework powered by LangChain and LangGraph.
 
-Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026) -- ported to Python with a generic, pluggable architecture.
+Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026) -- ported with a generic, pluggable architecture.
 
 ## What it does
 
@@ -21,11 +21,11 @@ The TaskAgent gets better over generations without manual intervention.
 ## Installation
 
 ```bash
-# From the python/ directory
-pip install -e .
+# Install from PyPI
+pip install hyperflow-ai
 
-# Or install dependencies directly
-pip install -r requirements.txt
+# Or install from source for development
+pip install -e .
 ```
 
 ### Requirements

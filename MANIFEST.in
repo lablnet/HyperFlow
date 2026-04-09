@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+recursive-include hyperflow *.py
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
