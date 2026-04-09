@@ -16,7 +16,7 @@ features:
   - title: Pluggable Architecture
     details: Works with multiple LLMs (OpenAI, Anthropic, Gemini, Ollama) and is powered by standard LangChain and LangGraph abstractions.
   - title: Advanced Tooling
-    details: MetaAgent modifies TaskAgents locally or safely inside Docker containers using provided shell and editor tools.
+    details: MetaAgent improves agents locally or safely inside Docker containers by refining their prompts, tools, and logic.
 ---
 
 > **Note**: Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026).

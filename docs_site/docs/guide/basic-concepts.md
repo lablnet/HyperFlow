@@ -15,7 +15,7 @@ The TaskAgent serves as the problem solver for domain-specific tasks. It receive
 
 ### MetaAgent — The Improver
 
-The MetaAgent's job is to make the TaskAgent better. It acts as the "mutation operator". It reads past evaluation results, identifies failures, and edits source code (prompts, logic, tools) to fix them.
+The MetaAgent's job is to make the TaskAgent better. It acts as the "mutation operator". It reads past evaluation results, identifies failures, and refines the TaskAgent's **prompts, logic, and tools** to fix them.
 - **Input**: Repo path + eval results path + parent score
 - **Output**: Modified source code on disk (patches/diffs)
 - **Tools**: `bash` (run shell commands) + `editor` (view/edit files) — built-in
@@ -26,7 +26,7 @@ The evolutionary loop (`run_generate_loop`) is the heart of the system. It runs 
 
 ```mermaid
 graph TD
-    A[Archive] -->|1. Select Parent| B(Setup Executor)
+    A[Archive] -->|1. Select Parent Generation| B(Setup Executor)
     B -->|2. Apply Lineage Patches| C{MetaAgent Runs}
     C -->|3. Reads failures & modifies code| D[TaskAgent Runs]
     D -->|4. Evaluated against harness| E{Harness Evaluation}

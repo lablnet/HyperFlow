@@ -61,7 +61,7 @@ The TaskAgent is intentionally minimal. Its behavior is mostly driven by prompts
 
 ### MetaAgent — The Improver
 
-The MetaAgent's job is to make the TaskAgent better. It reads past evaluation results, identifies failures, and edits source code (prompts, logic, tools) to fix them.
+The MetaAgent's job is to make the TaskAgent better. It reads past evaluation results, identifies failures, and refines the TaskAgent's **prompts, logic, and tools** to fix them.
 
 - **Input**: Repo path + eval results path + parent score
 - **Output**: Modified source code on disk (patches/diffs)
@@ -96,7 +96,7 @@ The evolutionary loop (`hyperflow/core/generate_loop.py`) is the heart of the sy
 
 ```
 Generation N:
-  1. SELECT PARENT     Pick a previous generation from the archive
+  1. SELECT PARENT GENERATION  Pick a previous generation from the archive
   2. SETUP EXECUTOR    Create a clean workspace (local dir or Docker container)
   3. APPLY PATCHES     Replay the parent's patch chain to recreate its code state
   4. RUN METAAGENT     MetaAgent reads failures, edits code → produces new patch
@@ -575,7 +575,7 @@ cd examples/git_evolution && python run.py
 | **Executor** | An isolated environment (local or Docker) where code modifications happen |
 | **Generation** | One iteration of the evolutionary loop, producing a new agent version |
 | **Harness** | The generic evaluation runner that connects agents to domain tasks |
-| **MetaAgent** | The AI agent that reads failures and edits source code to improve the TaskAgent |
+| **MetaAgent** | The AI agent that reads failures and refines prompts, tools, and logic to improve the TaskAgent |
 | **Parent** | The generation whose code state is used as the starting point for a new generation |
 | **Patch** | A diff file capturing the code changes a generation made |
 | **Prediction** | The actual output the TaskAgent produces for a task |

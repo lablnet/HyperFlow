@@ -11,9 +11,9 @@ Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta
 
 ## What it does
 
-HyperAgents runs an evolutionary self-improvement loop where a **MetaAgent** rewrites a **TaskAgent's** code to make it better at solving tasks. Each generation:
+HyperFlow runs an evolutionary self-improvement loop where a **MetaAgent** rewrites a **TaskAgent's** prompts, logic, and tools to make it better at solving tasks. Each generation:
 
-1. Select a parent agent from the archive
+1. Select a parent generation from the archive
 2. MetaAgent reads past evaluation scores and edits the source code
 3. The modified TaskAgent is evaluated on domain tasks
 4. Score + code diff are saved to the archive
