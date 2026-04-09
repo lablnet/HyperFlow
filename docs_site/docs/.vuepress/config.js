@@ -41,6 +41,7 @@ export default defineUserConfig({
             '/guide/limitations.md',
             '/guide/examples.md',
             '/guide/contributing.md',
+            '/guide/citation.md',
           ],
         },
       ],

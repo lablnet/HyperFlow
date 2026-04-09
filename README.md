@@ -157,3 +157,19 @@ cd examples/git_evolution && python run.py --reset # start over
 ## License
 
 MIT
+
+## Citation
+
+If you use this framework in your research, please cite the original HyperAgents paper:
+
+```bibtex
+@misc{zhang2026hyperagents,
+      title={Hyperagents}, 
+      author={Jenny Zhang and Bingchen Zhao and Wannan Yang and Jakob Foerster and Jeff Clune and Minqi Jiang and Sam Devlin and Tatiana Shavrina},
+      year={2026},
+      eprint={2603.19461},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2603.19461}, 
+}
+```
