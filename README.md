@@ -1,4 +1,7 @@
 # HyperFlow (Python)
+<p align="center">
+  <img src="assets/logo.png" width="150" alt="HyperFlow Logo" />
+</p>
 
 > **⚠️ EXPERIMENTAL**: This project is currently in an experimental phase and is **not recommended for production use**.
 

@@ -1,6 +1,7 @@
 ---
 home: true
 heroText: HyperFlow
+heroImage: /logo.png
 tagline: Evolutionary self-improving agent framework powered by LangChain and LangGraph. ⚠️ EXPERIMENTAL
 actions:
   - text: Get Started

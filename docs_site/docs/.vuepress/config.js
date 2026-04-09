@@ -9,7 +9,12 @@ export default defineUserConfig({
   title: 'HyperFlow',
   description: 'Self-improving agent framework powered by LangChain and LangGraph.',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
+    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+    ['meta', { name: 'author', content: 'lablnet' }],
+    ['meta', { name: 'keywords', content: 'AI, Generative AI, LangChain, LangGraph, Quality Diversity, Evolution, LLM, Agents' }]
   ],
   plugins: [
     markdownChartPlugin({
@@ -17,6 +22,7 @@ export default defineUserConfig({
     }),
   ],
   theme: defaultTheme({
+    logo: '/logo.png',
     repo: 'lablnet/HyperFlow',
     docsDir: 'docs_site/docs',
     navbar: [
