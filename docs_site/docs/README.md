@@ -19,4 +19,4 @@ features:
     details: MetaAgent modifies TaskAgents locally or safely inside Docker containers using provided shell and editor tools.
 ---
 
-> **Note**: This is the Python port of Meta Research's original HyperAgents (2026).
+> **Note**: Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026).

@@ -7,7 +7,7 @@
 
 Self-improving agent framework powered by LangChain and LangGraph.
 
-Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026) -- ported with a generic, pluggable architecture.
+Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026).
 
 ## What it does
 
