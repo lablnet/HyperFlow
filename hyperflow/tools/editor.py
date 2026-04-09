@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import os
 import subprocess
+import py_compile
 from pathlib import Path
 from typing import Optional
 
@@ -215,6 +216,9 @@ def create_editor_tool(timeout: int = 120) -> StructuredTool:
         try:
             if command == "view":
                 return _view_file(path, view_range)
+            
+            # For data-modifying commands, we'll track the original state
+            # so we can revert if a syntax error is introduced.
             if command == "create":
                 if not file_text:
                     return "Error: file_text is required for create."
@@ -222,17 +226,46 @@ def create_editor_tool(timeout: int = 120) -> StructuredTool:
                     return f"Error: File already exists at {path}. Use str_replace to edit."
                 os.makedirs(os.path.dirname(path), exist_ok=True)
                 Path(path).write_text(file_text, encoding="utf-8")
+                
+                # Check syntax
+                if path.endswith(".py"):
+                    try:
+                        py_compile.compile(path, doraise=True)
+                    except py_compile.PyCompileError as e:
+                        os.remove(path)
+                        return f"Error: Syntax error in created file: {e.msg}. File creation cancelled."
                 return f"File created at: {path}"
+
             if command == "str_replace":
                 if not old_str:
                     return "Error: old_str is required for str_replace."
-                return _replace_text(path, old_str, new_str or "")
+                result = _replace_text(path, old_str, new_str or "")
+                
+                # Check syntax if successful
+                if not result.startswith("Error") and path.endswith(".py"):
+                    try:
+                        py_compile.compile(path, doraise=True)
+                    except py_compile.PyCompileError as e:
+                        _undo_edit(path)
+                        return f"Error: Your str_replace introduced a syntax error: {e.msg}. The edit has been reverted. Please check your brackets/indentation and try again."
+                return result
+
             if command == "insert":
                 if insert_line is None:
                     return "Error: insert_line is required for insert."
                 if new_str is None:
                     return "Error: new_str is required for insert."
-                return _insert_text(path, insert_line, new_str)
+                result = _insert_text(path, insert_line, new_str)
+
+                # Check syntax if successful
+                if not result.startswith("Error") and path.endswith(".py"):
+                    try:
+                        py_compile.compile(path, doraise=True)
+                    except py_compile.PyCompileError as e:
+                        _undo_edit(path)
+                        return f"Error: Your insert introduced a syntax error: {e.msg}. The edit has been reverted. Please check your brackets/indentation and try again."
+                return result
+
             if command == "undo_edit":
                 return _undo_edit(path)
             return f"Error: Unknown command {command}"
