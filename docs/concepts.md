@@ -26,7 +26,7 @@ This document explains the core concepts, architecture, and data flow of the Hyp
 
 HyperFlow is a self-improving agent framework. Instead of manually tuning an AI agent, you let another AI agent do it automatically.
 
-The core idea comes from evolutionary computation and Quality-Diversity (QD) algorithms: maintain an **archive** of agent versions, evaluate each one, and use the best-performing versions as starting points for further improvement.
+The core idea comes from **evolutionary computation** algorithms, which are optimization methods inspired by biological evolution. Instead of having a single AI agent try to optimize its logic once, the system maintains a "population" (or archive) of different agent versions. Over multiple generations, the system "selects" the best performing agents, applies "mutations" (having the MetaAgent rewrite their code to fix errors), and generates new offspring agents. Over time, the agents naturally evolve to achieve higher success rates on tasks without human intervention.
 
 ```
 ┌─────────────────────────────────────────────────┐
@@ -131,7 +131,7 @@ config = GenerateLoopConfig(
 
 The archive is the central data structure that stores the history of all generations. It serves as a **versioned record of evolutionary improvement** — not a zip file.
 
-The name comes from **MAP-Elites** and **Quality-Diversity (QD) algorithms** in evolutionary computation, where "archive" is the standard term for the collection of solutions.
+The name comes from **evolutionary computation**, where "archive" is the standard term for the collection of solutions.
 
 ### Data Structure
 
@@ -585,4 +585,4 @@ cd examples/git_evolution && python run.py
 | **JSONL** | JSON Lines format — one JSON object per line, append-friendly |
 | **Local Maximum** | A solution that's better than its neighbors but not the best overall |
 | **Global Maximum** | The best possible solution across all approaches |
-| **MAP-Elites / QD** | Quality-Diversity algorithms from evolutionary computation that inspired this architecture |
+| **Evolutionary Loop** | Optimization algorithms from evolutionary computation that inspired this architecture |
