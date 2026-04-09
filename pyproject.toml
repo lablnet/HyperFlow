@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "hyperflow-ai"
-version = "1.0.0"
+version = "1.1.0"
 description = "A self-improving agent framework built on LangChain and LangGraph"
 readme = "README.md"
 license = {text = "MIT"}
