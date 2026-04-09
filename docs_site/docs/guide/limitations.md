@@ -26,11 +26,3 @@ While the agent can modify almost all of its own codebase (including its own Met
 Evolutionary computation is resource-intensive. 
 - **Generations**: Each experiment typically requires 50-200 iterations.
 - **Costs**: Depending on the Foundation Model (FM) used, a full run can be expensive in terms of API tokens.
-
-### Sandboxing & Security
-Self-modifying code must be executed in a **sandbox** (e.g., Docker). 
-- **Latency**: Running tasks in isolated environments adds overhead.
-- **Safety**: Ensuring the agent doesn't perform unintended side effects while editing its own code requires strict resource limits.
-
-### Overfitting
-Just like standard machine learning, the MetaAgent can "overfit" to the training tasks. If it finds a clever way to solve the training set that doesn't work on new problems, its performance on the **Test Set** will be poor.

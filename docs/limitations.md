@@ -26,11 +26,3 @@ While the agent can modify almost all of its own codebase, the **outer evolution
 Evolutionary computation is resource-intensive. 
 - **Generations**: Each experiment typically requires 50-200 iterations.
 - **Costs**: Depending on the Foundation Model (FM) used, a full run can be expensive in terms of API tokens and local GPU compute.
-
-### Sandboxing & Security
-Self-modifying code must be executed in a **sandbox** (e.g., Docker). 
-- **Latency**: Running tasks in isolated environments adds overhead to the evaluation loop.
-- **Escapes**: Although Docker is used, absolute security against sophisticated "adversarial" self-modification is an ongoing area of study.
-
-### Overfitting
-Without a diverse "Validation" set, a MetaAgent might discover "cheats" or heuristics that score highly on training data but fail to generalize to real-world tasks. Proper split management (Train/Val/Test) is essential.
