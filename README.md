@@ -1,12 +1,22 @@
 # HyperFlow (Python)
 
-A self-improving agent framework built on LangChain and LangGraph. Python port of [HyperAgents](../README.md) (TypeScript).
+Self-improving agent framework powered by LangChain and LangGraph.
 
-## Overview
+Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026) -- ported to Python with a generic, pluggable architecture.
 
-HyperFlow runs an **evolutionary self-improvement loop**: a **MetaAgent** edits the **TaskAgent** (and optionally prompt files) using **bash + editor** tools; each variant is **evaluated** on domain tasks; results and patches go into a **JSONL archive**; **parent selection** picks the next lineage to mutate.
+## What it does
 
-Supports **local or Docker** execution, multiple **LLM providers** (OpenAI, Anthropic, Google Gemini, Ollama), and pluggable **domains** and **evaluators** (static, LLM judge, human feedback).
+HyperAgents runs an evolutionary self-improvement loop where a **MetaAgent** rewrites a **TaskAgent's** code to make it better at solving tasks. Each generation:
+
+1. Select a parent agent from the archive
+2. MetaAgent reads past evaluation scores and edits the source code
+3. The modified TaskAgent is evaluated on domain tasks
+4. Score + code diff are saved to the archive
+5. Repeat
+
+The TaskAgent gets better over generations without manual intervention.
+
+> **New here?** Read [docs/concepts.md](docs/concepts.md) for a detailed explanation of every concept with examples.
 
 ## Installation
 
