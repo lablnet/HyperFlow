@@ -1,6 +1,8 @@
-# Advanced Concepts & Architectures
+# Advanced concepts and architecture
 
-## Parent Selection Strategies
+For diagrams of the loop, harness, and archive, see [Basic concepts](./basic-concepts.md).
+
+## Parent selection strategies
 
 `select_parent` drives which generation is passed into the MetaAgent. Choosing the absolute best generation every time is actually flawed due to local maximums. HyperFlow provides five algorithms via `select_parent.py`:
 
