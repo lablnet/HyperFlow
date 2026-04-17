@@ -3,20 +3,30 @@
   <img src="assets/logo.png" width="150" alt="HyperFlow Logo" />
 </p>
 
+HyperFlow is a framework for building agents that rewrite and test their own improvements.
+
+Instead of manually retuning prompts and logic after every failure, HyperFlow runs a self-improvement loop where an agent evaluates what happened, edits its own code, tools, and prompts, then tests the new version in a sandbox.
+
+The core idea is simple: do not just rerun the same workflow. Learn from execution and get better over time.
+
+Built on LangChain and LangGraph. Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026).
+
 > **⚠️ EXPERIMENTAL**: This project is currently in an experimental phase and is **not recommended for production use**.
-
-Self-improving agent framework powered by LangChain and LangGraph.
-
-Inspired by [HyperAgents](https://github.com/facebookresearch/HyperAgents) (Meta Research, 2026).
 
 ## What it does
 
-HyperFlow runs an evolutionary self-improvement loop where a **MetaAgent** rewrites its own source code (including prompts, tools, and logic) to make it better at solving tasks. It is **self-referential**: the mechanism that improves the agent is itself part of the editable code. Each generation:
+HyperFlow runs an evolutionary self-improvement loop with two roles:
+- **TaskAgent** solves the domain problem
+- **MetaAgent** studies evaluation results and improves the system
+
+Each generation:
 
 1. Select a parent generation from the archive
 2. MetaAgent reads past evaluation scores and edits the source code
 3. Evaluation scripts run in a sandbox to score the new agent
 4. Better agents are added back to the archive for future generations
+
+It is **self-referential**: the mechanism that improves the agent is itself part of the editable code.
 
 > [!IMPORTANT]
 > This framework is currently in an **Experimental** state. See [Limitations](docs/limitations.md) for more information.
