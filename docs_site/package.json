@@ -16,7 +16,7 @@
     "@vuepress/client": "2.0.0-rc.28",
     "@vuepress/plugin-markdown-chart": "2.0.0-rc.128",
     "@vuepress/theme-default": "2.0.0-rc.128",
-    "mermaid": "^11.14.0",
+    "mermaid": "^11.15.0",
     "sass-embedded": "^1.99.0",
     "vue": "^3.5.32",
     "vuepress": "2.0.0-rc.28"
